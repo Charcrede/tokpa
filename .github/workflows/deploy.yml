@@ -30,7 +30,7 @@ jobs:
       run: npm install && npm run production
 
     - name: Set up MySQL
-      uses: alviscarvalho/setup-mysql@v1
+      uses: actions/setup-mysql@v1
       with:
         mysql-version: '5.7'
         mysql-root-password: ${{ secrets.DB_ROOT_PASSWORD }}
