@@ -43,8 +43,8 @@ jobs:
     - name: Install npm Dependencies
       run: npm install
 
-    # - name: Build Assets
-    #   run: npm run production
+    - name: Build Assets
+      run: npm run production
 
     - name: Run Database Migrations
       run: php artisan migrate --force
