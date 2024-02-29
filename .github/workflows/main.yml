@@ -9,6 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+          MYSQL_DATABASE: laravel_db
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -31,13 +41,6 @@ jobs:
 
     - name: Build Assets
       run: npm run production
-
-    - name: Set up MySQL
-      uses: nano-labs/setup-mysql@v1
-      with:
-        mysql-version: '8.0'
-        root-password: ${{ secrets.MYSQL_ROOT_PASSWORD }}
-        port: 3306
 
     - name: Run Database Migrations
       run: php artisan migrate --force
