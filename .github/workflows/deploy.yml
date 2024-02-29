@@ -27,7 +27,7 @@ jobs:
         node-version: '20'
 
     - name: Install vue
-      run: npm install && npm install vue
+      run: npm install && npm install vue@3.4.0
 
     - name: Install npm dependencies
       run: npm run production
