@@ -30,7 +30,7 @@ jobs:
       run: npm install && npm install vue
 
     - name: Install npm dependencies
-      run: npm run prodution
+      run: npm run production
 
     - name: Set up MySQL
       uses: mirromutth/mysql-action@v1
