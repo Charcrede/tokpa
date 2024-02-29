@@ -11,9 +11,9 @@ jobs:
 
     services:
       mysql:
-        image: mysql:8.0
+        image: mysql:latest
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD : 1 # Assurez-vous que ceci correspond au nom de votre secret contenant le mot de passe
+          MYSQL_ALLOW_EMPTY_PASSWORD: 1
           MYSQL_DATABASE: tokpa
         ports:
           - 3306:3306
@@ -35,7 +35,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20'
+        node-version: '20' # Utilisation de Node.js version 20
 
     - name: Install Composer Dependencies
       run: composer install --no-dev --optimize-autoloader
