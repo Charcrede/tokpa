@@ -1,0 +1,40 @@
+@import url(../../storage/app/fonts/mes_css_font/OpenSans.css);
+@import url(../../storage/app/fonts/mes_css_font/economica.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background: #f9f9f9; 
+    color: #363636;
+    font-family: OpenSans !important;
+}
+input:not([type = radio], [type = checkbox]):focus-visible, input:not([type = radio], [type = checkbox]):focus, .create:focus-visible, .create:focus{
+    border: none !important;
+    outline: none !important;
+    border-bottom: 2px solid #7e4a7c !important;
+    --tw-ring-shadow : none !important;
+}
+
+input:not([type = radio], [type = checkbox]), .create{
+    outline: none !important;
+    border : none !important;
+    border-bottom: 2px solid #707070 !important;
+    background : transparent !important;
+
+}
+img {
+    object-fit: cover !important;
+}
+h1,h2,h3,h4,h5,label,legend{
+    font-family: economica;
+    font-weight: bold;
+    font-size: 1.5rem
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+
+a:hover, button:hover{
+    transform: scale(1.05) !important;
+    transition: 1s !important;
+}
