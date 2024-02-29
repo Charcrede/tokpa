@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "production": "NODE_ENV=production webpack --mode=production"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
@@ -26,5 +27,5 @@
     "dependencies": {
         "croppie": "^2.6.5",
         "sweetalert2": "^11.10.5"
-    }
+    },
 }
