@@ -13,7 +13,7 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }} # Assurez-vous que ceci correspond au nom de votre secret contenant le mot de passe
+          MYSQL_ALLOW_EMPTY_PASSWORD : 1 # Assurez-vous que ceci correspond au nom de votre secret contenant le mot de passe
           MYSQL_DATABASE: tokpa
         ports:
           - 3306:3306
