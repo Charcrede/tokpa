@@ -1,5 +1,4 @@
 {
-    "private": true,
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -25,7 +24,6 @@
         "webpack-cli": "^5.1.4"
     },
     "dependencies": {
-        "croppie": "^2.6.5",
         "sweetalert2": "^11.10.5"
     },
 }
