@@ -24,14 +24,11 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
 
     - name: Install vue
       run: npm install && npm install vue@3
 
-    - name: Install inertia
-      run : npm install @inertiajs/inertia @inertiajs/inertia-vue3
-        
     - name: Install npm dependencies
       run: npm run production
 
