@@ -31,6 +31,9 @@ export default {
       }
     ]
   },
+  stats: {
+    errorDetails: true,
+  },
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
