@@ -9,6 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: Destimme
+          MYSQL_DATABASE: test_db
+          MYSQL_USER: user
+          MYSQL_PASSWORD: Destimme
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -32,12 +41,12 @@ jobs:
     - name: Install npm dependencies
       run: npm run production
 
-    - name: Set up MySQL
-      uses: mirromutth/mysql-action@v1
-      with:
-        mysql database: 'tokpa' # Optional, default value is "test". The specified database which will be create
-        mysql user: 'root' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
-        mysql password: '' # Required if "mysql user" exists. The password for the "mysql user"
+    # - name: Set up MySQL
+    #   uses: mirromutth/mysql-action@v1
+    #   with:
+    #     mysql database: 'tokpa' # Optional, default value is "test". The specified database which will be create
+    #     mysql user: 'root' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
+    #     mysql password: '' # Required if "mysql user" exists. The password for the "mysql user"
       
 
     - name: Run database migrations
