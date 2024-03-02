@@ -1,1 +1,1 @@
-<img src="storage/app/assets/image/logo.svg">
+<img src="storage/app/assets/image/screen-mockups.svg">
