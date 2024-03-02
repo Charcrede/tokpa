@@ -18,7 +18,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: tokpa
           MYSQL_USER: root
-          MYSQL_PASSWORD: ''
+          MYSQL_PASSWORD: 'Destimme'
 
     steps:
     - name: Checkout code
