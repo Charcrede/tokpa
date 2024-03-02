@@ -13,10 +13,10 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: Destimme
+          MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: test_db
-          MYSQL_USER: user
-          MYSQL_PASSWORD: Destimme
+          MYSQL_USER: root
+          MYSQL_PASSWORD: ''
 
     steps:
     - name: Checkout code
