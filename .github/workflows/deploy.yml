@@ -46,15 +46,12 @@ jobs:
     - name: Start Mysql
       run: sudo service mysql start
 
-    - name: Grant privilleges
-      run : GRANT ALL PRIVILEGES ON tokpa.* TO 'forge'@'localhost'
-
+    - name: Configure .env file
+      run: cp .env.example .env
 
     - name: Run database migrations
       run: php artisan migrate --force
 
-    - name: Configure .env file
-      run: cp .env.example .env
 
     - name: Generate application key
       run: php artisan key:generate
