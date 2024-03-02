@@ -15,10 +15,10 @@ jobs:
         env:
           MYSQL_HOST: 127.1.0.0
           MYSQL_PORT: 3306
-          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_ROOT_PASSWORD: 'root'
           MYSQL_DATABASE: tokpa
           MYSQL_USER: root
-          MYSQL_PASSWORD: ''
+          MYSQL_PASSWORD: 'root'
 
     steps:
     - name: Checkout code
