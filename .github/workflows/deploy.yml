@@ -35,9 +35,11 @@ jobs:
     - name: Set up MySQL
       uses: mirromutth/mysql-action@v1
       with:
+        host port : 2082
         mysql database: 'tokpa' # Optional, default value is "test". The specified database which will be create
         mysql user: 'root' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
         mysql password: ${{ secrets.DB_USER_PASSWORD }} # Required if "mysql user" exists. The password for the "mysql user"
+      
 
     - name: Run database migrations
       run: php artisan migrate --force
