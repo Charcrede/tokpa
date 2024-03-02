@@ -13,8 +13,6 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_HOST: 127.1.0.0
-          MYSQL_PORT: 3306
           MYSQL_ROOT_PASSWORD: 'root'
           MYSQL_DATABASE: tokpa
           MYSQL_USER: root
@@ -45,12 +43,6 @@ jobs:
 
     - name: Start Mysql
       run: sudo service mysql start
-
-    # - name: Connect Mysql
-    #   run: mysql -u root -p root
-
-    # - name: grant Mysql
-    #   run: GRANT ALL PRIVILEGES ON tokpa.* TO 'root'@'localhost' && EXIT
 
     - name: Configure .env file
       run: cp .env.example .env
