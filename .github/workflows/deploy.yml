@@ -46,11 +46,11 @@ jobs:
     - name: Start Mysql
       run: sudo service mysql start
 
-    - name: Connect Mysql
-      run: mysql -u root -p root
+    # - name: Connect Mysql
+    #   run: mysql -u root -p root
 
-    - name: grant Mysql
-      run: GRANT ALL PRIVILEGES ON tokpa.* TO 'root'@'localhost' && EXIT
+    # - name: grant Mysql
+    #   run: GRANT ALL PRIVILEGES ON tokpa.* TO 'root'@'localhost' && EXIT
 
     - name: Configure .env file
       run: cp .env.example .env
