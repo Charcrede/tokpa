@@ -1,1 +1,1 @@
-lisez moi
+<img src="storage/app/assets/image/logo.svg">
