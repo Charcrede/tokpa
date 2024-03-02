@@ -13,6 +13,7 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
+          MYSQL_PORT: 3306
           MYSQL_ROOT_PASSWORD: 'root'
           MYSQL_DATABASE: tokpa
           MYSQL_USER: root
