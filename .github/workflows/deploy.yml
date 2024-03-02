@@ -35,7 +35,7 @@ jobs:
     - name: Set up MySQL
       uses: mirromutth/mysql-action@v1
       with:
-        mysql-version: '5.7'
+        mysql-version: '8.0'
         mysql-root-password: ${{ secrets.DB_ROOT_PASSWORD }}
         mysql-database: tokpa
         mysql-user: root
