@@ -37,9 +37,10 @@ jobs:
       with:
         mysql version: '8.0'
         # mysql-root-password: ${{ secrets.DB_ROOT_PASSWORD }}
+        # entryPoint : ''
         mysql database: tokpa
         mysql user: root
-        mysql password: ${{ secrets.DB_USER_PASSWORD }}
+        mysql password: ''
 
     - name: Run database migrations
       run: php artisan migrate --force
