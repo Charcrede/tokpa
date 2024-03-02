@@ -1,9 +1,9 @@
 {
-    "private" : "true",
-    "type" : "module",
+    "private": "true",
+    "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build --stats-error-details",
+        "build": "vite build",
         "production": "NODE_ENV=production webpack --mode=production"
     },
     "devDependencies": {
@@ -25,6 +25,6 @@
         "webpack-cli": "^5.1.4"
     },
     "dependencies": {
-        "sweetalert2": "^11.10.5"
+        "sweetalert2": "^11.6.13"
     }
 }
